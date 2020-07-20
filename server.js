@@ -12,11 +12,11 @@ var PORT = process.env.PORT || 6660;
 
 //const apiRoutes = require("./controler/noteController.js");
 const htmlRoutes = require("./controler/htmlControler.js");
+const apiRoutes = require("./controler/noteControler.js");
 
-//app.use(apiRoutes);
 app.use(htmlRoutes);
-
-
+app.use(apiRoutes);
+/*
 var noteHandler = {
     notes:[],
 
@@ -60,7 +60,7 @@ var noteHandler = {
 }
 
 noteHandler.loadNotes();
-
+*/
 //noteHandler.deleteNote("3123")
 //var time = String(Date.now())
 //console.log(time)
