@@ -10,26 +10,13 @@ app.use(express.json());
 
 var PORT = process.env.PORT || 6660;
 
-//Todo Add an id element
-//todo add a create method
-//todo add a delete method
-/*
-function loadFile(){
-    return fs.readFileSync(__dirname+ "/db/db.json", "utf-8", (err, data) => {
-        if (err) {
-            return err;
-        }else{
-            
-            return data;
-        }
+//const apiRoutes = require("./controler/noteController.js");
+const htmlRoutes = require("./controler/htmlControler.js");
 
-    });
-    
-}
+//app.use(apiRoutes);
+app.use(htmlRoutes);
 
-var notes = loadFile();
-console.log(notes)
-*/
+
 var noteHandler = {
     notes:[],
 
@@ -78,7 +65,7 @@ noteHandler.loadNotes();
 //var time = String(Date.now())
 //console.log(time)
 //console.log(typeof time)
-
+/*
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
@@ -111,7 +98,7 @@ app.delete("/api/notes/:itemId", function(req, res) {
     res.json(req.params.itemId)
     res.end;
 })
-
+*/
 app.listen(PORT, function () {
     
     console.log("App listening on PORT " + PORT);
