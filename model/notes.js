@@ -15,9 +15,20 @@ class Notes{
 }
 
 var test = new Notes()
-
+/*
 test.create(["This is a title", "This is a text"])
 .then (results => {
     console.log(results)
 })
 
+
+test.selectAll()
+.then (results => {
+    console.log(results)
+})
+*/
+
+test.remove(1)
+.then (results => {
+    console.log(results)
+})
