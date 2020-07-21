@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS noteTaker_db;
+CREATE DATABASE noteTaker_db;
+USE noteTaker_db;
+
+CREATE TABLE notes (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(30),
+    text VARCHAR(255)
+)
